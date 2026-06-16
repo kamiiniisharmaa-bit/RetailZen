@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RetailZen — Unique Imagery | Mindful Ecomm</title>
+  <!-- Google Fonts + reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1f2a2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* header */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 24px;
+      border-bottom: 1px solid #efe6db;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.8px;
+      background: linear-gradient(125deg, #2a6b42, #c27835);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2b3b2c;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #c27835;
+    }
+    .header-icons {
+      display: flex;
+      gap: 24px;
+      font-size: 1.25rem;
+      color: #2f4230;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .header-icons i:hover {
+      transform: scale(1.08);
+      color: #c27835;
+    }
+
+    /* hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      margin: 55px 0 75px;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h1 {
+      font-size: 3.4rem;
+      font-weight: 750;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      color: #1f3b2c;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #4f5a4e;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .btn-primary {
+      background-color: #2a6b42;
+      color: white;
+      padding: 14px 34px;
+      border: none;
+      border-radius: 48px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .btn-primary:hover {
+      background-color: #1f5535;
+      transform: translateY(-2px);
+    }
+    .hero-image {
+      flex: 1;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 650;
+      margin: 60px 0 30px 0;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: #c27835;
+      border-radius: 6px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 34px;
+      margin-bottom: 55px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: 0.25s;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+      border: 1px solid #f2ebe2;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 32px -12px rgba(0, 0, 0, 0.12);
+      border-color: #e1d6ca;
+    }
+    .card-img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .product-card:hover .card-img {
+      transform: scale(1.03);
+    }
+    .card-info {
+      padding: 20px 20px 24px;
+    }
+    .card-info h3 {
+      font-size: 1.28rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .price {
+      font-weight: 700;
+      color: #2a6b42;
+      font-size: 1.25rem;
+      margin: 12px 0;
+    }
+    .rating {
+      color: #f3b33d;
+      letter-spacing: 3px;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+    .btn-card {
+      background: transparent;
+      border: 1.5px solid #2a6b42;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #2a6b42;
+      font-size: 0.9rem;
+    }
+    .btn-card:hover {
+      background: #2a6b42;
+      color: white;
+    }
+
+    /* banner with unique imagery */
+    .banner {
+      background: #f5ede2;
+      border-radius: 56px;
+      margin: 55px 0 60px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 45px 55px;
+      gap: 40px;
+    }
+    .banner-content {
+      flex: 1.2;
+    }
+    .banner-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .banner-img {
+      flex: 1;
+      border-radius: 34px;
+      overflow: hidden;
+      max-width: 400px;
+      box-shadow: 0 20px 28px -10px rgba(0,0,0,0.1);
+    }
+    .banner-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 28px;
+      object-fit: cover;
+    }
+
+    /* testimonial with completely unique avatar images */
+    .testimonial-section {
+      margin: 70px 0;
+    }
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 35px;
+    }
+    .testimonial-card {
+      background: #ffffffec;
+      border-radius: 32px;
+      padding: 30px;
+      flex: 1;
+      min-width: 250px;
+      border: 1px solid #ede3d7;
+      backdrop-filter: blur(2px);
+    }
+    .testimonial-card img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 18px;
+      border: 2.5px solid #c27835;
+    }
+    .testimonial-card p {
+      font-style: italic;
+      color: #2c3832;
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+    .customer-name {
+      font-weight: 700;
+      color: #2a6b42;
+    }
+
+    /* instagram / unique gallery mosaic (all different images) */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin: 30px 0 20px;
+    }
+    .insta-item {
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      transition: 0.2s;
+    }
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .insta-item:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #1e2a24;
+      color: #e2d9cf;
+      padding: 52px 0 32px;
+      margin-top: 70px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+    }
+    .footer-col h4 {
+      color: #f2e2cf;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #3c4a42;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero-text h1 {
+        font-size: 2.4rem;
+      }
+      .navbar {
+        flex-direction: column;
+      }
+      .banner {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 35px;
+      }
+      .banner-img {
+        max-width: 100%;
+      }
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Retail<span style="background: none; color:#c27835;">Zen</span></div>
+    <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </ul>
+    <div class="header-icons">
+      <i class="fas fa-search"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <i class="far fa-user"></i>
+    </div>
+  </nav>
+
+  <!-- Hero section – UNIQUE IMAGE (peaceful mountain lake / zen mood) -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Harmony meets intention</h1>
+      <p>Discover an ever-evolving edit of handcrafted goods, organic textures, and serene design — each piece tells a story of calm.</p>
+      <button class="btn-primary">Immerse yourself <i class="fas fa-leaf"></i></button>
+    </div>
+    <div class="hero-image">
+      <!-- unique image: misty forest and zen tea setting, different from any other -->
+      <img src="https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=800" alt="zen tea ceremony with soft light" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Bestsellers – 4 product cards each with UNIQUE distinct image (clay, textile, pottery, natural fiber) -->
+  <div>
+    <h2 class="section-title">Curated essentials • unique textures</h2>
+    <div class="featured-grid">
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4062777/pexels-photo-4062777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="handmade clay tea cup collection" loading="lazy">
+        <div class="card-info">
+          <h3>Shino Glaze Set</h3>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <div class="price">$74.00</div>
+          <button class="btn-card">Add to cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4498138/pexels-photo-4498138.jpeg?auto=compress&cs=tinysrgb&w=600" alt="organic cotton linen blanket" loading="lazy">
+        <div class="card-info">
+          <h3>Woven Cloud Throw</h3>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="price">$129.00</div>
+          <button class="btn-card">Add to cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="incense holder and natural palo santo" loading="lazy">
+        <div class="card-info">
+          <h3>Ember Incense Set</h3>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <div class="price">$38.00</div>
+          <button class="btn-card">Add to cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/6771144/pexels-photo-6771144.jpeg?auto=compress&cs=tinysrgb&w=600" alt="rattan and leather tote bag" loading="lazy">
+        <div class="card-info">
+          <h3>Solstice Tote</h3>
+          <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <div class="price">$89.00</div>
+          <button class="btn-card">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner with distinct imagery (calm, plant corner / different from any above) -->
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Breathe deeper, live slower</h2>
+      <p style="margin-bottom: 22px;">Join our inner circle — get 15% off your first mindful purchase, plus meditative guides.</p>
+      <button class="btn-primary" style="background:#c27835; color:#201e1a;">Find tranquility →</button>
+    </div>
+    <div class="banner-img">
+      <img src="https://images.pexels.com/photos/5486831/pexels-photo-5486831.jpeg?auto=compress&cs=tinysrgb&w=700" alt="peaceful plant shelf and ceramic decor" loading="lazy">
+    </div>
+  </div>
+
+  <!-- New arrivals block – four more UNIQUE images (stoneware, basket, wooden utensil, meditation cushion) -->
+  <div>
+    <h2 class="section-title">New arrivals • slow edit</h2>
+    <div class="featured-grid">
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4651142/pexels-photo-4651142.jpeg?auto=compress&cs=tinysrgb&w=600" alt="handmade stoneware bowl" loading="lazy">
+        <div class="card-info">
+          <h3>Kohiki Serving Bowl</h3>
+          <div class="price">$58.00</div>
+          <button class="btn-card">Discover</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/5885983/pexels-photo-5885983.jpeg?auto=compress&cs=tinysrgb&w=600" alt="natural woven basket with lid" loading="lazy">
+        <div class="card-info">
+          <h3>Hima Storage Basket</h3>
+          <div class="price">$64.00</div>
+          <button class="btn-card">Discover</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4123958/pexels-photo-4123958.jpeg?auto=compress&cs=tinysrgb&w=600" alt="acacia wood spoon set" loading="lazy">
+        <div class="card-info">
+          <h3>Forest Spoon Trio</h3>
+          <div class="price">$29.00</div>
+          <button class="btn-card">Discover</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img class="card-img" src="https://images.pexels.com/photos/5530598/pexels-photo-5530598.jpeg?auto=compress&cs=tinysrgb&w=600" alt="round floor meditation cushion" loading="lazy">
+        <div class="card-info">
+          <h3>Zen Zafu Cushion</h3>
+          <div class="price">$79.00</div>
+          <button class="btn-card">Discover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials section with truly diverse avatar images (unique faces) -->
+  <div class="testimonial-section">
+    <h2 class="section-title">Whispers from the zen community</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <img src="https://images.pexels.com/photos/912946/pexels-photo-912946.jpeg?auto=compress&cs=tinysrgb&w=200" alt="portrait woman smile natural">
+        <p>"RetailZen is my sanctuary. The natural materials, the unboxing experience — everything radiates tranquility. I bought the bamboo kitchen set and it's stunning."</p>
+        <div class="customer-name">— Priya S.</div>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://images.pexels.com/photos/1820561/pexels-photo-1820561.jpeg?auto=compress&cs=tinysrgb&w=200" alt="man with beard calm expression">
+        <p>"Finally an e‑commerce that aligns with my values. Every item feels curated with care, and the shipping is always carbon-neutral. The stoneware is art."</p>
+        <div class="customer-name">— Julian M.</div>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://images.pexels.com/photos/3778607/pexels-photo-3778607.jpeg?auto=compress&cs=tinysrgb&w=200" alt="female with curly hair warmth">
+        <p>"I look forward to each drop! The journal guides are a bonus. The quality of the linen clothing exceeds my expectations — soft, timeless."</p>
+        <div class="customer-name">— Samira L.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram gallery - 6 UNIQUE images (flowers, nature, ceramics, tea, craft, plant) -->
+  <div>
+    <h2 class="section-title">From the feed • @RetailZen</h2>
+    <div class="insta-grid">
+      <div class="insta-item"><img src="https://images.pexels.com/photos/258293/pexels-photo-258293.jpeg?auto=compress&cs=tinysrgb&w=400" alt="cherry blossoms zen garden"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/2093009/pexels-photo-2093009.jpeg?auto=compress&cs=tinysrgb&w=400" alt="matcha bowl whisk preparation"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/534169/pexels-photo-534169.jpeg?auto=compress&cs=tinysrgb&w=400" alt="open book on wooden table with tea"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/1438800/pexels-photo-1438800.jpeg?auto=compress&cs=tinysrgb&w=400" alt="handmade ceramic vase"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/4441975/pexels-photo-4441975.jpeg?auto=compress&cs=tinysrgb&w=400" alt="weaving loom natural fiber"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&w=400" alt="aloe vera and plants interior"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>RetailZen</h4>
+        <p>Conscious design, timeless calm. Explore a world of mindful objects & sustainable living.</p>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 RetailZen — Slow elegance, intentional living. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const addBtns = document.querySelectorAll('.btn-card');
+    const primaryBtns = document.querySelectorAll('.btn-primary');
+    
+    addBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('🧘 Added to your basket — your Zen collection grows.');
+      });
+    });
+    
+    primaryBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if(btn.innerText.includes('Immerse') || btn.innerText.includes('Find tranquility')) {
+          alert('🌱 Welcome to RetailZen. Embrace the art of slow living.');
+        } else {
+          alert('✨ Discover mindful offers — 15% off with welcome code ZENHOME');
+        }
+      });
+    });
+    
+    const icons = document.querySelectorAll('.header-icons i');
+    icons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        if(icon.classList.contains('fa-search')) alert('🔎 Find products that speak to your soul');
+        else if(icon.classList.contains('fa-heart')) alert('💚 Save to your inspiration board');
+        else if(icon.classList.contains('fa-shopping-bag')) alert('🛍️ Your mindful bag awaits');
+        else alert('👤 Sign in & unlock personal rituals');
+      });
+    });
+  })();
+</script>
+</body>
+</html>

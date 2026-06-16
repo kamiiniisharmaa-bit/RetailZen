@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RetailZen · Privacy Policy | Your Data, Our Respect</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1f2a2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* header / navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 24px;
+      border-bottom: 1px solid #efe6db;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.8px;
+      background: linear-gradient(125deg, #2a6b42, #c27835);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2b3b2c;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #c27835;
+    }
+    .header-icons {
+      display: flex;
+      gap: 24px;
+      font-size: 1.25rem;
+      color: #2f4230;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .header-icons i:hover {
+      transform: scale(1.08);
+      color: #c27835;
+    }
+
+    /* privacy hero */
+    .privacy-hero {
+      background: linear-gradient(115deg, #f3ede4 0%, #fef7ef 100%);
+      border-radius: 42px;
+      padding: 48px 40px;
+      margin: 40px 0 40px;
+      text-align: center;
+    }
+    .privacy-hero h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: #2a6b42;
+      margin-bottom: 12px;
+    }
+    .privacy-hero p {
+      font-size: 1rem;
+      color: #5d6b5e;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .last-updated {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      background: #e6ddd0;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 60px;
+      color: #3b4e3a;
+    }
+
+    /* main content card */
+    .privacy-content {
+      background: white;
+      border-radius: 36px;
+      padding: 48px 52px;
+      margin-bottom: 70px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #efe3d6;
+    }
+    .privacy-section {
+      margin-bottom: 44px;
+    }
+    .privacy-section h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #2a5c3e;
+      margin-bottom: 20px;
+      display: inline-block;
+      border-left: 5px solid #c27835;
+      padding-left: 18px;
+    }
+    .privacy-section p, .privacy-section li {
+      color: #353f38;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+    .privacy-section ul, .privacy-section ol {
+      padding-left: 28px;
+      margin: 16px 0 20px;
+    }
+    .privacy-section li {
+      margin-bottom: 10px;
+    }
+    .highlight-box {
+      background: #f9f3ea;
+      padding: 20px 26px;
+      border-radius: 28px;
+      margin: 24px 0;
+      border-left: 4px solid #c27835;
+    }
+    .data-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #eef3ec;
+      padding: 6px 14px;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      margin-right: 12px;
+      margin-bottom: 8px;
+    }
+    hr {
+      margin: 32px 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #e2d5c8, transparent);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid #c27835;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: #c27835;
+      text-decoration: none;
+      transition: 0.2s;
+      margin-top: 18px;
+    }
+    .back-link:hover {
+      background: #c27835;
+      color: white;
+    }
+    /* footer */
+    footer {
+      background-color: #1e2a24;
+      color: #e2d9cf;
+      padding: 52px 0 32px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+    }
+    .footer-col h4 {
+      color: #f2e2cf;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #3c4a42;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 760px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .privacy-content {
+        padding: 30px 24px;
+      }
+      .privacy-hero h1 {
+        font-size: 2rem;
+      }
+      .privacy-section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation (consistent with brand style) -->
+  <nav class="navbar">
+    <div class="logo">Retail<span style="background: none; color:#c27835;">Zen</span></div>
+    <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </ul>
+    <div class="header-icons">
+      <i class="fas fa-search"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <i class="far fa-user"></i>
+    </div>
+  </nav>
+
+  <!-- Privacy Hero Section -->
+  <div class="privacy-hero">
+    <h1>Privacy Policy</h1>
+    <p>Your trust is the foundation of our mindful community. We are committed to protecting your personal data with clarity, security, and respect.</p>
+    <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 13, 2026</div>
+  </div>
+
+  <!-- Main Privacy Content -->
+  <div class="privacy-content">
+    
+    <div class="privacy-section">
+      <h2>1. Information We Collect</h2>
+      <p>At RetailZen, we collect only the information necessary to provide you with a seamless, conscious shopping experience. This includes:</p>
+      <ul>
+        <li><strong>Personal identifiers:</strong> Name, email address, shipping/billing address, phone number.</li>
+        <li><strong>Payment details:</strong> Processed securely via third-party gateways (we never store full credit card numbers).</li>
+        <li><strong>Order history & preferences:</strong> Products viewed, saved items, and past purchases to improve recommendations.</li>
+        <li><strong>Technical data:</strong> IP address, browser type, device information, and cookies for site functionality.</li>
+        <li><strong>Communications:</strong> Customer support inquiries, newsletter interactions, and feedback.</li>
+      </ul>
+      <div class="highlight-box">
+        <i class="fas fa-shield-alt" style="margin-right: 12px; color:#2a6b42;"></i> 
+        <strong>Data minimization pledge:</strong> We never request or store sensitive data unless strictly required for order fulfillment (e.g., tax exemption certificates).
+      </div>
+    </div>
+
+    <div class="privacy-section">
+      <h2>2. How We Use Your Information</h2>
+      <p>Every piece of data serves a clear purpose rooted in serving you better:</p>
+      <ul>
+        <li>✅ Process and fulfill orders, including shipping updates and returns.</li>
+        <li>✅ Personalize your shopping experience and share curated slow-living content.</li>
+        <li>✅ Improve our website, product selection, and customer support.</li>
+        <li>✅ Send promotional emails (only with your explicit opt-in consent).</li>
+        <li>✅ Prevent fraud, ensure security, and comply with legal obligations.</li>
+      </ul>
+      <p>We will never use your information for intrusive profiling or sell it to third parties. Your data remains yours.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>3. Cookies & Tracking Technologies</h2>
+      <p>RetailZen uses essential cookies to enable core functionality (cart, checkout, login). We also use analytics cookies (via privacy-friendly platforms) to understand how visitors interact with our site, which helps us enhance your experience. You can manage cookie preferences through your browser settings. Disabling cookies may affect site performance.</p>
+      <div>
+        <span class="data-badge"><i class="fas fa-cookie-bite"></i> Essential cookies</span>
+        <span class="data-badge"><i class="fas fa-chart-line"></i> Anonymous analytics</span>
+        <span class="data-badge"><i class="fas fa-palette"></i> Preference cookies</span>
+      </div>
+    </div>
+
+    <div class="privacy-section">
+      <h2>4. Sharing & Third Parties</h2>
+      <p>We never sell your personal data. However, we share limited information with trusted partners who help operate our store, strictly under confidentiality agreements:</p>
+      <ul>
+        <li><strong>Shipping carriers</strong> (e.g., USPS, DHL) to deliver your order.</li>
+        <li><strong>Payment processors</strong> (Stripe, PayPal) — they handle payment data without storing on our servers.</li>
+        <li><strong>Email service provider</strong> for newsletters (you can unsubscribe anytime).</li>
+        <li><strong>Legal compliance:</strong> If required by law or to protect our rights.</li>
+      </ul>
+      <p>All third parties are vetted for GDPR/CCPA compliance and data security.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>5. Data Security & Retention</h2>
+      <p>We implement industry-standard safeguards, including SSL encryption, firewalls, and restricted access to personal data. Your information is retained only as long as necessary: order data for 7 years (tax/accounting purposes), customer profiles until account deletion, and marketing data until you withdraw consent. We regularly review our security practices.</p>
+      <div class="highlight-box">
+        🔒 <strong>Security note:</strong> While no system is 100% impenetrable, we conduct annual audits and use PCI-DSS compliant payment processing.
+      </div>
+    </div>
+
+    <div class="privacy-section">
+      <h2>6. Your Privacy Rights</h2>
+      <p>Depending on your location (e.g., California, EU, UK, Brazil), you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Request erasure of your data (subject to legal retention).</li>
+        <li><strong>Opt-out:</strong> Withdraw consent for marketing communications at any time.</li>
+        <li><strong>Data portability:</strong> Receive a structured, machine-readable copy.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <strong>privacy@retailzen.com</strong>. We will respond within 30 days. We never discriminate against users who exercise their privacy rights.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>7. Children's Privacy</h2>
+      <p>RetailZen does not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with data, please contact us immediately, and we will delete it. Our products and services are directed toward an adult audience seeking intentional living.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>8. International Data Transfers</h2>
+      <p>RetailZen is based in the United States. If you access our site from outside the US, your information may be transferred to, stored, and processed in the US. We ensure adequate safeguards (e.g., Standard Contractual Clauses) for EU/UK data transfers. By using our website, you consent to this transfer.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>9. Email & Marketing Choices</h2>
+      <p>We believe in permission-based communication. When you sign up for our newsletter, you’ll receive mindful inspirations, new arrivals, and exclusive discounts. You can unsubscribe instantly via the “unsubscribe” link in every email or by updating your account preferences. We never share your email with unrelated third parties.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>We may update this policy from time to time to reflect changes in our practices or legal requirements. The “Last updated” date at the top indicates when changes were made. We encourage you to review this page periodically. For significant changes, we will notify you via email or a notice on our website.</p>
+    </div>
+
+    <hr>
+
+    <div class="privacy-section">
+      <h2>11. Contact Our Privacy Team</h2>
+      <p>If you have any questions, concerns, or data requests, please reach out — we’re here to help:</p>
+      <p><i class="fas fa-envelope" style="margin-right: 10px; color:#c27835;"></i> <strong>privacy@retailzen.com</strong><br>
+      <i class="fas fa-phone-alt" style="margin-right: 10px; color:#c27835;"></i> +1 (888) 724-6937 (Mon-Fri, 10am–5pm PT)<br>
+      <i class="fas fa-map-marker-alt" style="margin-right: 10px; color:#c27835;"></i> RetailZen Privacy Office, 1120 Harmony Lane, Suite B, Los Angeles, CA 90012</p>
+      <div class="highlight-box">
+        🌿 <strong>Our commitment:</strong> Transparency isn't just a policy — it's our practice. Every data decision honors your trust.
+      </div>
+    </div>
+
+    <!-- Return to Home / Terms (optional navigation) -->
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="#" class="back-link" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Back to RetailZen Home</a>
+      <a href="#" class="back-link" id="viewTermsBtn" style="margin-left: 16px;"><i class="fas fa-file-contract"></i> View Terms of Service</a>
+    </div>
+    <p style="font-size: 0.75rem; text-align: center; margin-top: 30px; color: #8c9a8c;">This Privacy Policy applies solely to information collected through retailzen.com. By using our services, you acknowledge that you have read and understood this policy.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>RetailZen</h4>
+        <p>Conscious design, timeless calm. Explore a world of mindful objects & sustainable living.</p>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 RetailZen — Slow elegance, intentional living. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Interactive navigation demo (privacy-aware)
+  const backBtn = document.getElementById('backToHomeBtn');
+  if(backBtn) {
+    backBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('🌱 Return to the mindful home of RetailZen. Your privacy stays protected.');
+      // In a real deployment, this would redirect to index.html or homepage.
+      window.location.href = '#';
+    });
+  }
+
+  const termsBtn = document.getElementById('viewTermsBtn');
+  if(termsBtn) {
+    termsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('📜 Redirecting to Terms of Service page (complete transparency).');
+      // simulate terms page link; could be relative link in real scenario.
+    });
+  }
+
+  // header icons demo
+  const icons = document.querySelectorAll('.header-icons i');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      if(icon.classList.contains('fa-search')) alert('🔍 Search our mindful catalog — privacy-respecting analytics only.');
+      else if(icon.classList.contains('fa-heart')) alert('💚 Your wishlist stays private and secure.');
+      else if(icon.classList.contains('fa-shopping-bag')) alert('🛍️ Bag & checkout are PCI compliant.');
+      else alert('👤 Your account data is encrypted and protected.');
+    });
+  });
+
+  console.log('RetailZen Privacy Policy — Your data, your peace of mind.');
+</script>
+</body>
+</html>

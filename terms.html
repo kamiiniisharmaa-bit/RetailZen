@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RetailZen · Terms of Service | Mindful Commerce</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1f2a2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* header / navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 24px;
+      border-bottom: 1px solid #efe6db;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.8px;
+      background: linear-gradient(125deg, #2a6b42, #c27835);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2b3b2c;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #c27835;
+    }
+    .header-icons {
+      display: flex;
+      gap: 24px;
+      font-size: 1.25rem;
+      color: #2f4230;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .header-icons i:hover {
+      transform: scale(1.08);
+      color: #c27835;
+    }
+
+    /* Terms hero (small banner) */
+    .terms-hero {
+      background: linear-gradient(115deg, #f3ede4 0%, #fef7ef 100%);
+      border-radius: 42px;
+      padding: 48px 40px;
+      margin: 40px 0 40px;
+      text-align: center;
+    }
+    .terms-hero h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      color: #2a6b42;
+      margin-bottom: 12px;
+    }
+    .terms-hero p {
+      font-size: 1rem;
+      color: #5d6b5e;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .last-updated {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      background: #e6ddd0;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 60px;
+      color: #3b4e3a;
+    }
+
+    /* terms content */
+    .terms-content {
+      background: white;
+      border-radius: 36px;
+      padding: 48px 52px;
+      margin-bottom: 70px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid #efe3d6;
+    }
+    .terms-section {
+      margin-bottom: 40px;
+    }
+    .terms-section h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #2a5c3e;
+      margin-bottom: 18px;
+      display: inline-block;
+      border-left: 5px solid #c27835;
+      padding-left: 18px;
+    }
+    .terms-section p, .terms-section li {
+      color: #353f38;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+    .terms-section ul, .terms-section ol {
+      padding-left: 28px;
+      margin: 16px 0 20px;
+    }
+    .terms-section li {
+      margin-bottom: 8px;
+    }
+    .highlight {
+      background: #f9f3ea;
+      padding: 18px 22px;
+      border-radius: 24px;
+      margin: 20px 0;
+      border-left: 4px solid #c27835;
+    }
+    hr {
+      margin: 32px 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #e2d5c8, transparent);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid #c27835;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: #c27835;
+      text-decoration: none;
+      transition: 0.2s;
+      margin-top: 18px;
+    }
+    .back-link:hover {
+      background: #c27835;
+      color: white;
+    }
+
+    /* footer */
+    footer {
+      background-color: #1e2a24;
+      color: #e2d9cf;
+      padding: 52px 0 32px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+    }
+    .footer-col h4 {
+      color: #f2e2cf;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #3c4a42;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 760px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .terms-content {
+        padding: 30px 24px;
+      }
+      .terms-hero h1 {
+        font-size: 2rem;
+      }
+      .terms-section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation (consistent with home page) -->
+  <nav class="navbar">
+    <div class="logo">Retail<span style="background: none; color:#c27835;">Zen</span></div>
+    <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </ul>
+    <div class="header-icons">
+      <i class="fas fa-search"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <i class="far fa-user"></i>
+    </div>
+  </nav>
+
+  <!-- Terms Hero Section -->
+  <div class="terms-hero">
+    <h1>Terms of Service</h1>
+    <p>Our pledge to clarity, kindness, and conscious commerce. Please read these terms carefully before engaging with RetailZen.</p>
+    <div class="last-updated"><i class="far fa-calendar-alt"></i> Last updated: June 13, 2026</div>
+  </div>
+
+  <!-- Main Terms Content -->
+  <div class="terms-content">
+    <div class="terms-section">
+      <h2>1. General & Acceptance</h2>
+      <p>Welcome to RetailZen ("we," "our," or "us"). By accessing or using the website retailzen.com (the "Site"), you agree to comply with and be bound by these Terms of Service. If you do not agree to any part of these terms, please refrain from using our Site. RetailZen reserves the right to update or modify these terms at any time without prior notice. Your continued use constitutes acceptance of the revised terms.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>2. Ethical E-Commerce & Eligibility</h2>
+      <p>RetailZen celebrates mindful consumption. To place an order, you must be at least 18 years old or have parental consent. By making a purchase, you confirm that the information provided is accurate and that you are authorized to use the selected payment method. We strive to reflect our sustainability values in every transaction, from packaging to partnerships.</p>
+      <div class="highlight">
+        <i class="fas fa-leaf" style="margin-right: 12px; color: #2a6b42;"></i> 
+        <strong>Our promise:</strong> All products are ethically sourced, and we offset carbon emissions for every shipment.
+      </div>
+    </div>
+
+    <div class="terms-section">
+      <h2>3. Products, Pricing & Availability</h2>
+      <p>We take pride in handcrafted, small-batch, and artisan goods. While we make every effort to display accurate colors, textures, and descriptions, slight variations may occur due to natural materials or screen settings. All prices are in USD and exclude applicable taxes & shipping fees, which will be calculated at checkout. We reserve the right to adjust pricing, discontinue items, or correct unintentional errors. If an item is listed with an incorrect price, we may cancel or refuse orders at our discretion.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>4. Orders, Payment & Shipping</h2>
+      <p>Once you place an order, you’ll receive an email confirmation. We reserve the right to cancel any order due to suspected fraud, stock unavailability, or regional restrictions. Payment methods include major credit cards, PayPal, and other secure gateways. Estimated shipping times are provided during checkout but may vary; RetailZen is not liable for delays caused by carriers or customs. Risk of loss passes to you upon delivery.</p>
+      <ul>
+        <li><i class="fas fa-check-circle" style="color:#2a6b42; width: 20px;"></i> Domestic orders: 3–7 business days</li>
+        <li><i class="fas fa-check-circle" style="color:#2a6b42;"></i> International orders: 10–20 business days (customs duties may apply)</li>
+      </ul>
+    </div>
+
+    <div class="terms-section">
+      <h2>5. Returns, Refunds & Mindful Exchanges</h2>
+      <p>We embrace the slow living ethos: we accept returns within 30 days of delivery for unworn, unused items in original packaging. To initiate a return, contact our Zen Care team. Refunds are processed to the original payment method within 10 business days of receiving the returned product. Sale items, final sale pieces, and personalized goods are non-refundable unless defective. Exchanges are welcomed for size or color variations, subject to stock availability.</p>
+      <div class="highlight">
+        💚 <strong>Sustainability note:</strong> We encourage thoughtful purchasing to reduce waste. For every return, we donate 2% of processing fees to reforestation.
+      </div>
+    </div>
+
+    <div class="terms-section">
+      <h2>6. Intellectual Property & Content</h2>
+      <p>All content on this Site — including images, illustrations, product descriptions, logos, graphics, and text — is the property of RetailZen or its content creators and is protected by copyright and trademark laws. You may not reproduce, distribute, modify, or republish any material without prior written consent. However, you are welcome to share product links for personal, non-commercial use while crediting RetailZen.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>7. User Accounts & Community Guidelines</h2>
+      <p>Creating an account allows you to track orders, save favorites, and access journal content. You’re responsible for maintaining the confidentiality of your login credentials. When leaving reviews or interacting on our blog, we ask for kindness and respect. RetailZen reserves the right to remove any content that is offensive, misleading, or violates our values of inclusivity and mindfulness.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, RetailZen shall not be liable for any indirect, incidental, or consequential damages arising from the use or inability to use our products or services. Our total liability shall not exceed the amount you paid for the specific product giving rise to the claim. Some jurisdictions do not allow exclusions, so this may not apply to you.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>9. Privacy & Data Protection</h2>
+      <p>Your privacy matters deeply to us. Our <a href="#" style="color:#c27835; text-decoration: underline;">Privacy Policy</a> outlines how we collect, use, and safeguard your information. We never sell your personal data to third parties. We use secure encryption and follow GDPR/CCPA guidelines for transparency.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2>10. Governing Law & Dispute Resolution</h2>
+      <p>These Terms shall be governed by the laws of the State of California, without regard to conflict of law principles. Any dispute arising from these terms or your use of the Site shall be resolved through binding arbitration in Santa Clara County, unless prohibited by law. Both parties agree to attempt informal resolution before initiating arbitration.</p>
+    </div>
+
+    <hr>
+
+    <div class="terms-section">
+      <h2>11. Changes & Contact Information</h2>
+      <p>We may revise these Terms from time to time. The "Last updated" date indicates when changes were made. It is your responsibility to review periodically. For any questions, concerns, or to exercise your rights, please reach out:</p>
+      <p><i class="fas fa-envelope" style="margin-right: 10px; color:#c27835;"></i> <strong>hello@retailzen.com</strong><br>
+      <i class="fas fa-map-marker-alt" style="margin-right: 10px; color:#c27835;"></i> 1120 Harmony Lane, Suite B, Los Angeles, CA 90012</p>
+    </div>
+
+    <!-- Return to home page link (back to main site) -->
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="#" class="back-link" id="backToHomeBtn"><i class="fas fa-arrow-left"></i> Back to RetailZen Home</a>
+    </div>
+    <p style="font-size: 0.8rem; text-align: center; margin-top: 28px; color: #8c9a8c;">By using RetailZen, you acknowledge that you have read, understood, and agree to these Terms of Service.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>RetailZen</h4>
+        <p>Conscious design, timeless calm. Explore a world of mindful objects & sustainable living.</p>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 RetailZen — Slow elegance, intentional living. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple interaction to mimic navigation (demo)
+  const backBtn = document.getElementById('backToHomeBtn');
+  if(backBtn) {
+    backBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('🌱 Returning to the mindful home page. Explore curated Zen collections.');
+      // In a real scenario, this would link to index.html; we simulate message and can redirect or keep demo.
+      window.location.href = '#'; // would replace with actual homepage URL if needed; but for demo we show alert.
+    });
+  }
+
+  // header icons alert (for demo consistency)
+  const icons = document.querySelectorAll('.header-icons i');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      if(icon.classList.contains('fa-search')) alert('🔍 Discover mindful products, terms & conditions always transparent.');
+      else if(icon.classList.contains('fa-heart')) alert('💚 Save items to your wishlist — conscious curation.');
+      else if(icon.classList.contains('fa-shopping-bag')) alert('🛍️ Your bag awaits mindful selections.');
+      else alert('👤 Sign in to access order history & slow living benefits.');
+    });
+  });
+
+  // small console assurance
+  console.log('RetailZen Terms of Service — grounded in transparency.');
+</script>
+</body>
+</html>

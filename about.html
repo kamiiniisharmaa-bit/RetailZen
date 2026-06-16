@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RetailZen · About Us | Mindful Living & Slow Design</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #1f2a2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* header / navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      gap: 24px;
+      border-bottom: 1px solid #efe6db;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.8px;
+      background: linear-gradient(125deg, #2a6b42, #c27835);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2b3b2c;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #c27835;
+    }
+    .header-icons {
+      display: flex;
+      gap: 24px;
+      font-size: 1.25rem;
+      color: #2f4230;
+    }
+    .header-icons i {
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .header-icons i:hover {
+      transform: scale(1.08);
+      color: #c27835;
+    }
+
+    /* about hero section */
+    .about-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      margin: 50px 0 60px;
+    }
+    .about-hero-text {
+      flex: 1;
+    }
+    .about-hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #2a6b42;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .about-hero-text .tagline {
+      font-size: 1.2rem;
+      color: #c27835;
+      font-weight: 500;
+      margin-bottom: 20px;
+      letter-spacing: -0.2px;
+    }
+    .about-hero-text p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #4a5a4e;
+      margin-bottom: 28px;
+    }
+    .about-hero-image {
+      flex: 1;
+      border-radius: 38px;
+      overflow: hidden;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.15);
+    }
+    .about-hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .about-hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* mission banner */
+    .mission-banner {
+      background: linear-gradient(125deg, #e9f0ea, #faf5ed);
+      border-radius: 48px;
+      padding: 60px 48px;
+      text-align: center;
+      margin: 40px 0 70px;
+    }
+    .mission-banner h2 {
+      font-size: 2.2rem;
+      font-weight: 650;
+      color: #2a5c3e;
+      margin-bottom: 20px;
+    }
+    .mission-banner p {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #445b49;
+    }
+    .values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .value-card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 32px;
+      flex: 1;
+      min-width: 220px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      border: 1px solid #e9dfd2;
+      transition: 0.2s;
+    }
+    .value-card i {
+      font-size: 2.5rem;
+      color: #c27835;
+      margin-bottom: 20px;
+    }
+    .value-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #2a6b42;
+    }
+    .value-card p {
+      font-size: 0.9rem;
+      color: #5b6e60;
+    }
+
+    /* story + image timeline */
+    .story-section {
+      margin: 70px 0;
+    }
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      align-items: center;
+    }
+    .story-text {
+      flex: 1.2;
+    }
+    .story-text h2 {
+      font-size: 2rem;
+      font-weight: 650;
+      color: #2a5c3e;
+      margin-bottom: 20px;
+      border-left: 5px solid #c27835;
+      padding-left: 20px;
+    }
+    .story-text p {
+      margin-bottom: 18px;
+      line-height: 1.55;
+      color: #3e5244;
+    }
+    .story-image {
+      flex: 1;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 20px 25px -10px rgba(0,0,0,0.1);
+    }
+    .story-image img {
+      width: 100%;
+      display: block;
+    }
+
+    /* team section */
+    .team-section {
+      margin: 70px 0 60px;
+      text-align: center;
+    }
+    .team-section h2 {
+      font-size: 2rem;
+      font-weight: 650;
+      color: #2a5c3e;
+      margin-bottom: 16px;
+    }
+    .team-sub {
+      color: #7e8c7c;
+      margin-bottom: 48px;
+      font-size: 1rem;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+    .team-card {
+      background: white;
+      border-radius: 32px;
+      padding: 28px 20px 28px;
+      width: 240px;
+      border: 1px solid #efe3d6;
+      transition: 0.2s;
+    }
+    .team-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 18px;
+      border: 3px solid #c27835;
+    }
+    .team-card h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2a6b42;
+    }
+    .team-card p {
+      color: #8b9a8b;
+      font-size: 0.85rem;
+      margin: 8px 0;
+    }
+    .social-icons {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      color: #c27835;
+    }
+
+    /* sustainability section (extra) */
+    .sustainability {
+      background: #f4f0e9;
+      border-radius: 44px;
+      padding: 55px 48px;
+      margin: 70px 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+    .sustain-text {
+      flex: 1.2;
+    }
+    .sustain-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #2a5c3e;
+    }
+    .sustain-text p {
+      margin-bottom: 16px;
+      line-height: 1.5;
+      color: #4e6456;
+    }
+    .sustain-img {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+    .sustain-img img {
+      width: 100%;
+      display: block;
+    }
+
+    footer {
+      background-color: #1e2a24;
+      color: #e2d9cf;
+      padding: 52px 0 32px;
+      margin-top: 70px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 45px;
+    }
+    .footer-col h4 {
+      color: #f2e2cf;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #3c4a42;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .about-hero h1 {
+        font-size: 2.4rem;
+      }
+      .mission-banner, .sustainability {
+        padding: 40px 28px;
+      }
+      .story-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Retail<span style="background: none; color:#c27835;">Zen</span></div>
+    <ul class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </ul>
+    <div class="header-icons">
+      <i class="fas fa-search"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+      <i class="far fa-user"></i>
+    </div>
+  </nav>
+
+  <!-- About Hero Section -->
+  <div class="about-hero">
+    <div class="about-hero-text">
+      <div class="tagline">✨ Mindful commerce · slow design</div>
+      <h1>We are RetailZen</h1>
+      <p>Born from a desire to blend tranquility with intentional consumption, RetailZen curates objects that bring harmony into daily rituals. We champion artisans, natural materials, and the beauty of unhurried living.</p>
+      <p>Every product tells a story — of skilled hands, ethical sourcing, and a deep respect for our planet. More than a store, we’re a sanctuary for those who cherish quality over quantity.</p>
+      <button class="btn-primary" id="journeyBtn" style="background:#2a6b42; color:white; border:none; padding:12px 28px; border-radius:50px; font-weight:500; cursor:pointer;">Explore our journey →</button>
+    </div>
+    <div class="about-hero-image">
+      <img src="https://images.pexels.com/photos/4108684/pexels-photo-4108684.jpeg?auto=compress&cs=tinysrgb&w=800" alt="RetailZen founders' space with ceramic and plants" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Mission & Values -->
+  <div class="mission-banner">
+    <h2>Our mission: slow elegance, deep impact</h2>
+    <p>We believe that the things we surround ourselves with shape our inner peace. That's why every piece at RetailZen is chosen with meticulous care — for the planet, the maker, and your wellbeing.</p>
+    <div class="values-grid">
+      <div class="value-card"><i class="fas fa-hand-sparkles"></i><h3>Artisan First</h3><p>Direct partnerships with ethical workshops and independent makers.</p></div>
+      <div class="value-card"><i class="fas fa-seedling"></i><h3>Earth-Conscious</h3><p>Zero-waste packaging, carbon-neutral shipping, & sustainable materials.</p></div>
+      <div class="value-card"><i class="fas fa-heart"></i><h3>Mindful Curation</h3><p>Every product enhances calm — no clutter, only essentials that matter.</p></div>
+    </div>
+  </div>
+
+  <!-- Our story section with unique image -->
+  <div class="story-section">
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>The story of Zen</h2>
+        <p>RetailZen was founded in 2020 by two friends who shared a vision: to create a haven for intentional living. After years in the fast-paced fashion industry, they craved slowness, authenticity, and transparency. What began as a small online marketplace for Japanese pottery and organic linens quickly grew into a global community of mindful souls.</p>
+        <p>Today, we collaborate with over 60 artisans from Kyoto to Oaxaca, focusing on heirloom-quality goods that honor traditional craft. Our name reflects our core belief: retail can be a Zen experience — calming, considered, and kind.</p>
+      </div>
+      <div class="story-image">
+        <img src="https://images.pexels.com/photos/4039491/pexels-photo-4039491.jpeg?auto=compress&cs=tinysrgb&w=800" alt="artisan hands weaving natural fiber" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <!-- Meet the team (unique images) -->
+  <div class="team-section">
+    <h2>The hearts behind RetailZen</h2>
+    <div class="team-sub">Curators, dreamers, and earth lovers</div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Founder Elena">
+        <h4>Elena Wu</h4>
+        <p>Co-founder & Creative Director</p>
+        <div class="social-icons"><i class="fab fa-instagram"></i><i class="fab fa-linkedin-in"></i></div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Co-founder Marcus">
+        <h4>Marcus Silva</h4>
+        <p>Co-founder & Sustainability Lead</p>
+        <div class="social-icons"><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i></div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Head curator">
+        <h4>Priya Kapoor</h4>
+        <p>Head Curator & Artisan Liaison</p>
+        <div class="social-icons"><i class="fab fa-instagram"></i><i class="fab fa-pinterest"></i></div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.pexels.com/photos/3465293/pexels-photo-3465293.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Community manager">
+        <h4>James Chen</h4>
+        <p>Community & Zen Care</p>
+        <div class="social-icons"><i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sustainability & Impact block -->
+  <div class="sustainability">
+    <div class="sustain-text">
+      <h2>🌿 Our sustainability promise</h2>
+      <p>We are on a journey toward regenerative retail. From plastic‑free shipping to tree planting for every order, we aim to leave the earth better than we found it.</p>
+      <p>✔ 100% recycled or compostable packaging<br>✔ 1% for the planet member<br>✔ Fair trade certified partners</p>
+      <button class="btn-primary" id="impactBtn" style="background:#c27835; color:#1e2a24; margin-top: 16px;">Read our impact report →</button>
+    </div>
+    <div class="sustain-img">
+      <img src="https://images.pexels.com/photos/7655198/pexels-photo-7655198.jpeg?auto=compress&cs=tinysrgb&w=800" alt="upcycled materials and plants in zen store" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Join our newsletter / community -->
+  <div style="background:#e7e0d4; border-radius: 44px; padding: 48px 40px; text-align: center; margin: 40px 0 20px;">
+    <h2 style="color: #2a5c3e;">Join our mindful circle</h2>
+    <p style="margin: 16px auto; max-width: 500px;">Receive slow-living stories, first access to artisan drops, and a 15% welcome code.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px;">
+      <input type="email" placeholder="your@email.com" style="padding: 14px 22px; border-radius: 60px; border: none; width: 260px; background: white;">
+      <button style="background:#2a6b42; border:none; padding: 14px 30px; border-radius: 60px; color: white; font-weight: 600; cursor: pointer;">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>RetailZen</h4>
+        <p>Conscious design, timeless calm. Explore a world of mindful objects & sustainable living.</p>
+      </div>
+      <div class="footer-col">
+        
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 RetailZen — Slow elegance, intentional living. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // interactive buttons for demo experience
+  const journeyBtn = document.getElementById('journeyBtn');
+  if(journeyBtn) {
+    journeyBtn.addEventListener('click', () => alert('🌱 Our journey: rooted in craft, growing in community. Welcome to RetailZen.'));
+  }
+  const impactBtn = document.getElementById('impactBtn');
+  if(impactBtn) {
+    impactBtn.addEventListener('click', () => alert('📘 Our 2026 Impact Report: carbon-neutral shipping + 15k trees planted. Join us.'));
+  }
+  const subscribeBtn = document.querySelector('button[style*="background:#2a6b42"]');
+  if(subscribeBtn) {
+    subscribeBtn.addEventListener('click', () => {
+      alert('✨ Thank you for joining the mindful circle. A 15% discount is on its way!');
+    });
+  }
+  // header icons interaction
+  const icons = document.querySelectorAll('.header-icons i');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      if(icon.classList.contains('fa-search')) alert('🔍 Discover intentional goods — explore our collections');
+      else if(icon.classList.contains('fa-heart')) alert('💚 Save your favorites for later mindful moments');
+      else if(icon.classList.contains('fa-shopping-bag')) alert('🛍️ Your bag holds slow-living treasures');
+      else alert('👤 Account: your zen sanctuary awaits');
+    });
+  });
+</script>
+</body>
+</html>
